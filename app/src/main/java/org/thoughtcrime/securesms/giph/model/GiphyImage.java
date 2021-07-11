@@ -89,6 +89,7 @@ public class GiphyImage {
 
   private @Nullable ImageData getGifPreviewData() {
     return images.preview_gif;
+  }
   
   private @Nullable ImageData getMp4PreviewData() {
     return images.preview;
