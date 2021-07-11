@@ -28,6 +28,11 @@ public class GiphyImage {
     ImageData data = getGifData();
     return data != null ? data.url : null;
   }
+  
+  public String getGifPreviewUrl() {
+    ImageData data = getGifPreviewData();
+    return data != null ? data.url : null;
+  }
 
   public String getMp4Url() {
     ImageData data = getMp4Data();
@@ -87,6 +92,10 @@ public class GiphyImage {
   
   private @Nullable ImageData getMp4PreviewData() {
     return images.preview;
+  }
+  
+  private @Nullable ImageData getGifPreviewData() {
+    return images.preview_gif;
   }
 
   private @Nullable ImageData getGifData() {
