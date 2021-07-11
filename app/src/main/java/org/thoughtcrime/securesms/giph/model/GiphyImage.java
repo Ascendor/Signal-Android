@@ -82,6 +82,9 @@ public class GiphyImage {
     return getLargestMp4WithinSizeConstraint(images.fixed_width, images.fixed_height, images.fixed_width_small, images.fixed_height_small, images.downsized_small);
   }
 
+  private @Nullable ImageData getGifPreviewData() {
+    return images.preview_gif;
+  
   private @Nullable ImageData getMp4PreviewData() {
     return images.preview;
   }
