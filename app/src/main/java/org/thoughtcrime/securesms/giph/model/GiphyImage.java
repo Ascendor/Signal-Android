@@ -165,6 +165,8 @@ public class GiphyImage {
     private ImageData downsized_small;
     @JsonProperty
     private ImageData preview;
+    @JsonProperty
+    private ImageData preview_gif;
   }
 
   public static class ImageData {
