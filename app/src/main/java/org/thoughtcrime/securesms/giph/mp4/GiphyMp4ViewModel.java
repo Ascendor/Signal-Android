@@ -46,7 +46,7 @@ public final class GiphyMp4ViewModel extends ViewModel {
     this.images           = Transformations.switchMap(pagedData, pagedData -> Transformations.map(pagedData.getData(),
                                                                                                   data -> Stream.of(data)
                                                                                                                 .filter(g -> g != null)
-                                                                                                                .filterNot(g -> TextUtils.isEmpty(isForMms ? g.getGifMmsUrl() : g.getGifUrl()))
+                                                                                                                .filterNot(g -> TextUtils.isEmpty(g.getGifPreviewUrl()))
                                                                                                                 .filterNot(g -> TextUtils.isEmpty(g.getMp4PreviewUrl()))
                                                                                                                 .filterNot(g -> TextUtils.isEmpty(g.getStillUrl()))
                                                                                                                 .toList()));
